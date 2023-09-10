@@ -86,13 +86,14 @@
   color: inherit;
 }
 .portfolio__link:hover {
-  color: #cc99fe;
+  color: #0075FF;
   .portfolio__image-wrapper::before {
     opacity: 1;
   }
   .portfolio__image-wrapper:after {
     opacity: 1;
     color: white;
+		top: 50%;
 }
 }
 .portfolio__image-wrapper {
@@ -115,10 +116,10 @@
 .portfolio__image-wrapper::after {
   content: "Перейти";
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   color: inherit;
-  background-color: #cc99fe;
+  background-color: #0075FF;
   padding: 20px 50px;
   border-radius: 40px;
   transform: translate(-50%, -50%);
