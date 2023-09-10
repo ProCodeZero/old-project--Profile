@@ -10,7 +10,7 @@
     background-position-y: 70%;
   }
 }
-
+// ------------COMMON------------------------------------------------------------>
 html,
 body {
   color: #f8f8f8;
@@ -39,12 +39,32 @@ body {
   align-items: center;
 }
 
-.main-title{
-	text-transform: uppercase;
-	font-size: 32px;
-	font-weight: 800;
-	letter-spacing: 0.1em;
-	line-height: 1.5;
+.main-title {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+.main-link {
+  color: white;
+	width: 150px;
+  height: 50px;
+	margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 50px;
+  border-radius: 30px;
+  background: #1d1d1d;
+  transition: all 0.3s ease;
+}
+.main-link:hover,
+:focus {
+	background: rgba(25, 25, 25, 0.8);
+	transition: all 0.3s ease;
 }
 
 // ------------GREETING------------------------------------------------------------>
