@@ -72,55 +72,208 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+@keyframes scroll-down {
+  0%, to {
+    background-position-y: 50%;
+  }
+  50% {
+    background-position-y: 70%;
+  }
+}
 html,
 body {
+  color: #f8f8f8;
   background-color: #f8f8f8;
-  font-family: "PT Sans Narrow", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
 }
 
-.footer {
+.body-wrapper {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+}
+
+.container {
+  max-width: 1220px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 25px;
+  text-align: center;
+  align-items: center;
+}
+
+.main-title {
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+.greeting {
+  background: url(/images/bg-main-block.jpg);
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #1d1d1d;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  color: #fff;
+  text-align: center;
+}
+
+.greeting__container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.my-name {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.greeting__title {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 32px;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+@media (max-width: 480px) {
+  .greeting__title {
+    font-size: 28px;
+  }
+}
+
+.gerrting__btn-to-header {
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  bottom: 10%;
+  background-image: url(/images/icons/greeeting/btn-down.svg);
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  animation: 0.5s scroll-down infinite forwards;
+}
+.gerrting__btn-to-header :hover,
+.gerrting__btn-to-header :focus {
+  border: 1px solid green;
+}
+@media (max-height: 480px) {
+  .gerrting__btn-to-header {
+    bottom: 5%;
+  }
+}
+
+.header {
+  background-color: black;
+  position: sticky;
+  top: 0;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  min-height: 70px;
+}
+
+.header__logo {
+  font-weight: 300;
+  font-size: 24px;
+  cursor: default;
+}
+
+.navigation__list {
+  display: flex;
+  gap: 35px;
+}
+
+.navigation__item {
+  text-decoration: none;
+  transition: all 0.8s;
+  position: relative;
+}
+.navigation__item ::after {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  content: "";
+  transition: width 0.3s ease-out;
+}
+.navigation__item :hover::after,
+.navigation__item :focus::after {
+  width: 100%;
+}
+
+.navigation__link {
+  color: inherit;
 }
 
 .main {
+  background-color: #f5f5f5;
+  color: black;
+}
+
+.author {
+  font-weight: 400;
+  line-height: 2;
+}
+
+.author__container {
+  margin: 0 auto;
+  padding: 86px 15px;
+}
+
+.author__head :not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.author__advantages {
+  padding-top: 45px;
+}
+
+.advantages__list {
   display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+@media (max-width: 941px) {
+  .advantages__list {
+    padding: 0px 15px;
+  }
 }
 
-.left-side__title {
-  text-transform: uppercase;
-  color: #474747;
-  font-family: "Raleway", sans-serif;
-  letter-spacing: 0.5rem;
-  width: calc(100% + 0.5rem);
-  font-size: 1.75em;
-  line-height: 1.375;
-  font-weight: bold;
+.advantages__item {
+  min-height: 180px;
+  width: 30%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-
-.left-side__subtitle {
-  text-transform: uppercase;
-  color: #474747;
-  font-family: "Raleway", sans-serif;
-  letter-spacing: 0.25rem;
-  width: calc(100% + 0.25rem);
-  font-size: 0.75em;
-  line-height: 1.875;
-  font-weight: 300;
-}
-
-.main__right-side {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-}
-.main__right-side img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+@media (max-width: 941px) {
+  .advantages__item {
+    width: 45%;
+  }
 }

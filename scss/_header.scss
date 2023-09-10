@@ -1,1 +1,45 @@
-@import "_functions";
+.header {
+  background-color: black;
+	position: sticky;
+	top: 0;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  min-height: 70px;
+}
+.header__logo {
+  font-weight: 300;
+  font-size: 24px;
+	cursor:default;
+}
+.header__navigation {
+}
+.navigation {
+}
+.navigation__list {
+  display: flex;
+  gap: 35px;
+}
+.navigation__item {
+  text-decoration: none;
+  transition: all 0.8s;
+  position: relative;
+  ::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    content: "";
+    transition: width 0.3s ease-out;
+  }
+  :hover::after,
+  :focus::after {
+    width: 100%;
+  }
+}
+.navigation__link {
+  color: inherit;
+}

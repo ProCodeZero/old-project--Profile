@@ -6,65 +6,139 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=PT+Sans+Narrow:wght@400;700&family=Raleway:wght@100&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
     <title>Denis Osipov, Hollow_DS</title>
   </head>
   <body>
-    <div class="wrapper">
-      <main class="main">
-        <div class="main__left-side">
-          <h1 class="left-side__title">Denis Osipov "Hollow_DS"</h1>
-          <h2 class="left-side__subtitle">Quality development of sites</h2>
-          <p class="left-side__text">
-            Development of websites of any complexity. I am involved in layout,
-            adaptation and integration. I carry out my work taking into account
-            modern requirements and using the best technologies.
-          </p>
-          <ul class="left-side__list">
-            <li class="left-side__elem">
-              <a href="#" class="button n02">About</a>
-            </li>
-            <li class="left-side__elem">
-              <a href="#" class="button n03">Portfolio</a>
-            </li>
-            <li class="left-side__elem">
-              <a href="#" class="button n04">Contact</a>
-            </li>
-            <li class="left-side__elem">
-              <a href="#" class="button n06">Blog</a>
-            </li>
-          </ul>
+    <div class="body-wrapper">
+      <section class="greeting">
+        <div class="greeting__container container">
+          <div class="my-name">Денис Осипов</div>
+          <h1 class="greeting__title">Качественная разработка сайтов</h1>
+          <div class="greeting__subtitle">Верстка · Адаптация · Доработка</div>
         </div>
-        <div class="main__right-side">
-          <img src="images/main-photo.jpg" alt="" />
+        <a
+          href="#header"
+          class="gerrting__btn-to-header"
+          title="Scroll down"
+        ></a>
+      </section>
+      <header id="header" class="header">
+        <div class="header__container container">
+          <div class="header__logo">Hollow DS</div>
+          <nav class="header__navigation navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Автор</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Портфолио</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Блог</a>
+              </li>
+              <li class="navigation__item">
+                <a href="#" class="navigation__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main class="main">
+        <div class="main__wrapper wrapper">
+          <section class="author">
+            <div class="author__container container">
+              <div class="author__head">
+                <h2 class="author__title main-title">Автор</h2>
+                <div class="author__text">
+                  Меня зовут Денис, я занимаюсь разработкой сайтов любой
+                  сложности. Занимаюсь версткой, доработкой и адаптацией. Свои
+                  работы выполняю с учетом современных требований и с
+                  использованием лучших технологий. Именно поэтому
+                  <strong>каждый проект:</strong>
+                </div>
+              </div>
+              <div class="author__advantages advantages">
+                <div class="advantages__list">
+                  <div class="advantages__item">
+                    <div class="advantages__icon">
+                      <img
+                        src="/images/icons/author/preproc.svg"
+                        alt="preproc"
+                      />
+                    </div>
+                    <div class="advantages__description">
+                      <strong>Использует</strong> в написани лучшие плагины и
+                      препроцессоры: Emmet, Sass
+                    </div>
+                  </div>
+                  <div class="advantages__item">
+                    <div class="advantages__icon">
+                      <img
+                        src="/images/icons/author/bem.svg"
+                        alt="BEM"
+                      />
+                    </div>
+                    <div class="advantages__description">
+                      <strong>Написан</strong> с использованием
+											методологии BEM в именовании классов
+                    </div>
+                  </div>
+                  <div class="advantages__item">
+                    <div class="advantages__icon">
+                      <img
+                        src="/images/icons/author/code.svg"
+                        alt="code"
+                      />
+                    </div>
+                    <div class="advantages__description">
+                      <strong>Без ошибок в коде</strong> (качественный валидный код)
+                    </div>
+                  </div>
+                  <div class="advantages__item">
+                    <div class="advantages__icon">
+                      <img
+                        src="/images/icons/author/optimization.svg"
+                        alt="optimization"
+                      />
+                    </div>
+                    <div class="advantages__description">
+                      <strong>Собирается</strong> и оптимизируется
+											в автоматическом режиме с помощью Gulp
+                    </div>
+                  </div>
+                  <div class="advantages__item">
+                    <div class="advantages__icon">
+                      <img
+                        src="/images/icons/author/time.svg"
+                        alt="time"
+                      />
+                    </div>
+                    <div class="advantages__description">
+                      <strong>Быстро загружается</strong> в браузерах на любых устройствах
+                    </div>
+                  </div>
+                  <div class="advantages__item">
+                    <div class="advantages__icon">
+                      <img
+                        src="/images/icons/author/saving.svg"
+                        alt="saving"
+                      />
+                    </div>
+                    <div class="advantages__description">
+                      <strong>Хранит</strong> историю изменения
+											исходных файлов в репозитории git
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
-      <footer class="footer">
-        <div class="footer__social-media">
-          <a href="#" class="social-media__link"
-            ><img
-              src="images/icons/instagram.svg"
-              alt=""
-              class="sotial-media__img" /></a
-          ><a href="#" class="social-media__link"
-            ><img
-              src="images/icons/vk.svg"
-              alt=""
-              class="sotial-media__img" /></a
-          ><a href="#" class="social-media__link"
-            ><img
-              src="images/icons/whatsapp.svg"
-              alt=""
-              class="sotial-media__img" /></a
-          ><a href="#" class="social-media__link"
-            ><img src="images/icons/email.svg" alt="" class="sotial-media__img"
-          /></a>
-        </div>
-        <div class="footer__designed-by">© Designed by HollowDS</div>
-      </footer>
     </div>
     <script src="js/script.js"></script>
   </body>
