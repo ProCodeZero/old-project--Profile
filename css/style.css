@@ -87,6 +87,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 16px;
+  letter-spacing: 0.1em;
 }
 
 .body-wrapper {
@@ -112,6 +113,7 @@ body {
   font-weight: 800;
   letter-spacing: 0.1em;
   line-height: 1.5;
+  letter-spacing: 0.3em;
 }
 
 .main-link {
@@ -129,6 +131,7 @@ body {
   line-height: 2;
   width: 50%;
   min-width: 250px;
+  letter-spacing: 0.1em;
 }
 
 .main-link:hover,
@@ -183,7 +186,7 @@ body {
   }
 }
 
-.gerrting__btn-to-header {
+.greeting__btn-to-header {
   position: absolute;
   border: 1px solid white;
   border-radius: 50%;
@@ -195,14 +198,16 @@ body {
   background-position: center 50%;
   animation: 0.5s scroll-down infinite forwards;
 }
-.gerrting__btn-to-header :hover,
-.gerrting__btn-to-header :focus {
-  border: 1px solid green;
-}
 @media (max-height: 480px) {
-  .gerrting__btn-to-header {
+  .greeting__btn-to-header {
     bottom: 5%;
   }
+}
+
+.greeting__btn-to-header:hover,
+.greeting__btn-to-header:focus {
+  border: 1px solid #0075ff;
+  background-color: rgba(0, 0, 0, 0);
 }
 
 .header {
@@ -218,10 +223,11 @@ body {
   min-height: 70px;
 }
 
-.header__logo {
+.logo {
   font-weight: 300;
   font-size: 24px;
   cursor: default;
+  letter-spacing: 0.2em;
 }
 
 .navigation__list {
@@ -230,6 +236,7 @@ body {
 }
 
 .navigation__item {
+  letter-spacing: 0.1em;
   text-decoration: none;
   transition: all 0.8s;
   position: relative;
@@ -251,6 +258,98 @@ body {
 
 .navigation__link {
   color: inherit;
+}
+
+.footer {
+  background-color: black;
+  border-top: 1px outset #0075FF;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 7% 30px;
+  gap: 10%;
+}
+@media (max-width: 400px) {
+  .footer__container {
+    flex-direction: column;
+  }
+  .footer__container .owner {
+    width: 100%;
+    display: flex;
+    gap: 5%;
+    justify-content: space-around;
+    text-align: left;
+    margin-bottom: 25px;
+    align-items: baseline;
+  }
+  .footer__container .owner .owner__name {
+    width: 45%;
+  }
+  .footer__container .owner .owner__logo {
+    width: 45%;
+    font-size: 16px;
+    padding-bottom: 0;
+  }
+  .footer__container .info {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 15px;
+    justify-content: space-around;
+    text-align: left;
+  }
+  .footer__container .info .info__block-1 {
+    font-size: 13px;
+  }
+  .footer__container .info .info__block-2 {
+    font-size: 13px;
+  }
+}
+
+.footer__owner {
+  text-align: left;
+}
+.footer__owner :not(:last-child) {
+  padding-bottom: 15px;
+}
+@media (max-width: 600px) {
+  .footer__owner {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .owner__logo {
+    font-size: 20px;
+  }
+}
+
+.owner__name {
+  letter-spacing: 0.07em;
+  line-height: 1.5;
+}
+
+.footer__info {
+  text-align: left;
+}
+@media (max-width: 600px) {
+  .footer__info {
+    font-size: 14px;
+  }
+}
+
+.info :not(:last-child) {
+  padding-bottom: 15px;
+}
+
+.info__block-1 {
+  line-height: 1.5;
+}
+
+.info__block-2 {
+  line-height: 1.5;
 }
 
 .main {
@@ -409,4 +508,190 @@ body {
   line-height: 2;
   font-weight: 700;
   transition: all 0.3s ease;
+}
+
+.main__contact {
+  background-color: black;
+  color: rgb(241, 241, 241);
+}
+
+.contact__container {
+  max-width: 702px;
+}
+
+.contact__title {
+  padding-top: 78px;
+}
+
+.contact__text {
+  font-size: 14px;
+  padding-top: 54px;
+  line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.contact__form {
+  padding: 54px 0px;
+}
+.contact__form :not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.form__group {
+  position: relative;
+}
+
+.form__label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  letter-spacing: 0.1em;
+}
+
+.form__input {
+  background-color: black;
+  color: inherit;
+  border: 1px solid white;
+  padding: 10px 15px;
+  min-width: 100%;
+  transition: all 0.5s ease;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+.form__input:focus,
+.form__input:active {
+  border: 1px solid #0075FF;
+}
+
+.form__input:focus + .form__label,
+.form__textarea:focus + .form__label {
+  opacity: 1;
+  transition: all 0.5s ease;
+  top: -20px;
+}
+
+.form__input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form__input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.form__input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+.form__input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form__textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+.form__textarea:focus:-moz-placeholder {
+  color: transparent;
+}
+
+.form__textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form__textarea {
+  height: 150px;
+}
+
+.form__privacy-policy {
+  font-size: 14px;
+  line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.privacy-policy-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: #0075FF !important;
+  transition: all 0.3s ease;
+}
+
+.privacy-policy-link:hover,
+.privacy-policy-link:focus {
+  color: #0075FF;
+  background-color: rgba(0, 0, 0, 0);
+  text-decoration-color: #0075FF;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.form__button {
+  color: #0075FF;
+}
+
+.form__button:focus,
+.form__button:hover {
+  color: black;
+}
+
+.contact__alternative-contact {
+  padding-bottom: 76px;
+}
+
+.alternative-contact__text {
+  padding-bottom: 36px;
+  font-size: 14px;
+  line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+.alternative-contact__links-list {
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+.links-list__link {
+  display: block;
+  height: 36px;
+  width: 36px;
+  background-color: white;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+          mask-size: cover;
+  transition: all 0.3s ease;
+}
+
+.links-list__link:hover {
+  background-color: #0075FF;
+  transition: all 0.3s ease;
+}
+
+.link-1 {
+  -webkit-mask-image: url("../pictures/icons/contact/skype.svg");
+          mask-image: url("../pictures/icons/contact/skype.svg");
+}
+
+.link-2 {
+  -webkit-mask-image: url("../pictures/icons/contact/email.svg");
+          mask-image: url("../pictures/icons/contact/email.svg");
+}
+
+.link-3 {
+  -webkit-mask-image: url("../pictures/icons/contact/telegram.svg");
+          mask-image: url("../pictures/icons/contact/telegram.svg");
+}
+
+.link-4 {
+  -webkit-mask-image: url("../pictures/icons/contact/whatsapp.svg");
+          mask-image: url("../pictures/icons/contact/whatsapp.svg");
 }

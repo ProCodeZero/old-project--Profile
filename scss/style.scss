@@ -1,144 +1,159 @@
 @import "_zero";
 
 @keyframes scroll-down {
-  0%,
-  to {
-    background-position-y: 50%;
-  }
 
-  50% {
-    background-position-y: 70%;
-  }
+	0%,
+	to {
+		background-position-y: 50%;
+	}
+
+	50% {
+		background-position-y: 70%;
+	}
 }
+
 // ------------COMMON------------------------------------------------------------>
 html,
 body {
-  color: #f8f8f8;
-  background-color: #f8f8f8;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
+	color: #f8f8f8;
+	background-color: #f8f8f8;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	letter-spacing: .1em;
 }
 
 .body-wrapper {
-  min-height: 100vh;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  align-items: stretch;
-  align-content: stretch;
+	min-height: 100vh;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	align-items: stretch;
+	align-content: stretch;
 }
+
 .container {
-  max-width: 1220px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0px 25px;
-  text-align: center;
-  align-items: center;
+	max-width: 1220px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px 25px;
+	text-align: center;
+	align-items: center;
 }
 
 .main-title {
-  text-transform: uppercase;
-  font-size: 32px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  line-height: 1.5;
+	text-transform: uppercase;
+	font-size: 32px;
+	font-weight: 800;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+	letter-spacing: .3em;
 }
 
 .main-link {
-  color: white;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
-  background: #1d1d1d;
-  padding: 20px 60px;
-  transition: all 0.3s ease;
-  text-transform: uppercase;
-  font-size: 16px;
-  line-height: 2;
-  width: 50%;
-  min-width: 250px;
+	color: white;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 30px;
+	background: #1d1d1d;
+	padding: 20px 60px;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 2;
+	width: 50%;
+	min-width: 250px;
+	letter-spacing: .1em;
 }
+
 .main-link:hover,
 :focus {
-  background: #0075ff;
-  transition: all 0.3s ease;
+	background: #0075ff;
+	transition: all 0.3s ease;
 }
 
 // ------------GREETING------------------------------------------------------------>
 .greeting {
-  background: url(../pictures/background_greeting.jpg);
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #1d1d1d;
-  padding-top: 56px;
-  padding-bottom: 56px;
-  color: #fff;
-  text-align: center;
+	background: url(../pictures/background_greeting.jpg);
+	height: 100vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #1d1d1d;
+	padding-top: 56px;
+	padding-bottom: 56px;
+	color: #fff;
+	text-align: center;
 }
+
 .greeting__container {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
 }
 
 .my-name {
-  font-weight: 700;
-  font-size: 18px;
+	font-weight: 700;
+	font-size: 18px;
 }
+
 .greeting__title {
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 32px;
-  letter-spacing: 0.1em;
-  line-height: 1.5;
-  @media (max-width: 480px) {
-    font-size: 28px;
-  }
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 32px;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+
+	@media (max-width: 480px) {
+		font-size: 28px;
+	}
 }
-.gerrting__btn-to-header {
-  position: absolute;
-  border: 1px solid white;
-  border-radius: 50%;
-  width: 56px;
-  height: 56px;
-  bottom: 10%;
-  background-image: url("../pictures/icons/greeeting/background_btn_greeting.svg");
-  background-repeat: no-repeat;
-  background-position: center 50%;
-  animation: 0.5s scroll-down infinite forwards;
-  :hover,
-  :focus {
-    border: 1px solid green;
-  }
-  @media (max-height: 480px) {
-    bottom: 5%;
-  }
+
+.greeting__btn-to-header {
+	position: absolute;
+	border: 1px solid white;
+	border-radius: 50%;
+	width: 56px;
+	height: 56px;
+	bottom: 10%;
+	background-image: url("../pictures/icons/greeeting/background_btn_greeting.svg");
+	background-repeat: no-repeat;
+	background-position: center 50%;
+	animation: 0.5s scroll-down infinite forwards;
+
+	@media (max-height: 480px) {
+		bottom: 5%;
+	}
 }
+
+.greeting__btn-to-header:hover,
+.greeting__btn-to-header:focus {
+	border: 1px solid #0075ff;
+	background-color: rgba($color: #000000, $alpha: 0)
+}
+
 @import "_header";
 @import "_footer";
 @import "_body";

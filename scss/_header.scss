@@ -9,10 +9,11 @@
   justify-content: space-between;
   min-height: 70px;
 }
-.header__logo {
+.logo {
   font-weight: 300;
   font-size: 24px;
 	cursor:default;
+	letter-spacing: .2em;
 }
 
 // ! Make a burger menu
@@ -25,6 +26,7 @@
   gap: 35px;
 }
 .navigation__item {
+	letter-spacing: .1em;
   text-decoration: none;
   transition: all 0.8s;
   position: relative;
