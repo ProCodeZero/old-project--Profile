@@ -133,12 +133,12 @@ body {
 
 .main-link:hover,
 :focus {
-  background: #0075FF;
+  background: #0075ff;
   transition: all 0.3s ease;
 }
 
 .greeting {
-  background: url(/images/bg-main-block.jpg);
+  background: url(../pictures/background_greeting.jpg);
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
@@ -190,7 +190,7 @@ body {
   width: 56px;
   height: 56px;
   bottom: 10%;
-  background-image: url(/images/icons/greeeting/btn-down.svg);
+  background-image: url("../pictures/icons/greeeting/background_btn_greeting.svg");
   background-repeat: no-repeat;
   background-position: center 50%;
   animation: 0.5s scroll-down infinite forwards;
