@@ -1,50 +1,119 @@
 .header {
-  background-color: black;
+	background-color: black;
 	position: sticky;
+	height: 70px;
 	top: 0;
-	z-index: 5;
+	z-index: 10;
 }
+
 .header__container {
-  display: flex;
-  justify-content: space-between;
-  min-height: 70px;
+	margin: 0 auto;
+	padding: 0 10%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 70px;
+	position: relative;
 }
+
 .logo {
-  font-weight: 300;
-  font-size: 24px;
-	cursor:default;
+	font-weight: 300;
+	font-size: 24px;
+	cursor: default;
 	letter-spacing: .2em;
 }
 
-// ! Make a burger menu
+// convert to burger menu
+
+.header__burger {
+	display: none;
+	cursor: pointer;
+}
+
 .header__navigation {
+	z-index: 2;
 }
-.navigation {
-}
+
 .navigation__list {
-  display: flex;
-  gap: 35px;
+	display: flex;
+	gap: 10%;
+
 }
+
+@media (max-width: 768px) {
+	.header {
+		height: 50px;
+	}
+
+	.header__container {
+		display: inline-flex;
+		min-height: 50px;
+	}
+
+	.header__burger {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+	}
+
+	.header__burger::after,
+	.header__burger::before {
+		content: "";
+		background-color: white;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+	}
+
+	.header__burger::before {
+		top: 0;
+	}
+
+	.header__burger span {
+		position: absolute;
+		background-color: white;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		top: 45%;
+	}
+
+	.header__burger::after {
+		bottom: 0;
+	}
+
+	.navigation {
+		display: none;
+	}
+}
+
 .navigation__item {
-	letter-spacing: .1em;
-  text-decoration: none;
-  transition: all 0.8s;
-  position: relative;
-  ::after {
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: white;
-    content: "";
-    transition: width 0.3s ease-out;
-  }
-  :hover::after,
-  :focus::after {
-    width: 100%;
-  }
+	text-decoration: none;
+	transition: all 0.8s;
+	position: relative;
+
+	::after {
+		display: block;
+		position: absolute;
+		left: 0;
+		width: 0;
+		height: 2px;
+		background-color: white;
+		content: "";
+		transition: width 0.3s ease-out;
+	}
+
+	:hover::after {
+		width: 100%;
+	}
+
+	:active {
+		width: 0;
+	}
 }
+
 .navigation__link {
-  color: inherit;
+	color: inherit;
 }

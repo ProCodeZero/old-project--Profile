@@ -34,6 +34,15 @@ body {
 	align-content: stretch;
 }
 
+.main {
+
+	.main-link:hover,
+	:focus {
+		background: #0075ff;
+		transition: all 0.3s ease;
+	}
+}
+
 .container {
 	max-width: 1220px;
 	width: 100%;
@@ -50,6 +59,10 @@ body {
 	letter-spacing: 0.1em;
 	line-height: 1.5;
 	letter-spacing: .3em;
+
+	@media (max-width: 701px) {
+		font-size: 28px;
+	}
 }
 
 .main-link {
@@ -70,90 +83,8 @@ body {
 	letter-spacing: .1em;
 }
 
-.main-link:hover,
-:focus {
-	background: #0075ff;
-	transition: all 0.3s ease;
-}
-
-// ------------GREETING------------------------------------------------------------>
-.greeting {
-	background: url(../pictures/background_greeting.jpg);
-	height: 100vh;
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	position: relative;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	width: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-color: #1d1d1d;
-	padding-top: 56px;
-	padding-bottom: 56px;
-	color: #fff;
-	text-align: center;
-}
-
-.greeting__container {
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
-}
-
-.my-name {
-	font-weight: 700;
-	font-size: 18px;
-}
-
-.greeting__title {
-	font-weight: 800;
-	text-transform: uppercase;
-	font-size: 32px;
-	letter-spacing: 0.1em;
-	line-height: 1.5;
-
-	@media (max-width: 480px) {
-		font-size: 28px;
-	}
-}
-
-.greeting__btn-to-header {
-	position: absolute;
-	border: 1px solid white;
-	border-radius: 50%;
-	width: 56px;
-	height: 56px;
-	bottom: 10%;
-	background-image: url("../pictures/icons/greeeting/background_btn_greeting.svg");
-	background-repeat: no-repeat;
-	background-position: center 50%;
-	animation: 0.5s scroll-down infinite forwards;
-
-	@media (max-height: 480px) {
-		bottom: 5%;
-	}
-}
-
-.greeting__btn-to-header:hover,
-.greeting__btn-to-header:focus {
-	border: 1px solid #0075ff;
-	background-color: rgba($color: #000000, $alpha: 0)
-}
 
 @import "_header";
 @import "_footer";
 @import "_body";
+@import "_popup";

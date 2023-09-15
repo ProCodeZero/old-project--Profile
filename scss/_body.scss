@@ -4,6 +4,83 @@
 	color: black;
 }
 
+// ------------GREETING------------------------------------------------------------>
+.greeting {
+	background: url(../pictures/background_greeting.jpg);
+	height: 100vh;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #1d1d1d;
+	padding-top: 56px;
+	padding-bottom: 56px;
+	color: #fff;
+	text-align: center;
+}
+
+.greeting__container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.my-name {
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.greeting__title {
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 32px;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+
+	@media (max-width: 480px) {
+		font-size: 28px;
+	}
+}
+
+.greeting__btn-to-header {
+	position: absolute;
+	border: 1px solid white;
+	border-radius: 50%;
+	width: 56px;
+	height: 56px;
+	bottom: 10%;
+	background-image: url("../pictures/icons/greeeting/background_btn_greeting.svg");
+	background-repeat: no-repeat;
+	background-position: center 50%;
+	animation: 0.5s scroll-down infinite forwards;
+
+	@media (max-height: 480px) {
+		bottom: 5%;
+	}
+}
+
+.greeting__btn-to-header:hover {
+	border: 1px solid #0075ff;
+	background-color: rgba($color: #000000, $alpha: 0)
+}
+
 // ------------AUTHOR------------------------------------------------------------>
 .author {
 	font-weight: 400;
@@ -186,6 +263,7 @@
 
 .contact__form {
 	padding: 54px 0px;
+
 	:not(:last-child) {
 		margin-bottom: 25px;
 	}
@@ -275,9 +353,10 @@
 .privacy-policy-link {
 	color: inherit;
 	text-decoration: underline;
-	text-decoration-color: #0075FF!important;
+	text-decoration-color: #0075FF !important;
 	transition: all 0.3s ease;
 }
+
 .privacy-policy-link:hover,
 .privacy-policy-link:focus {
 	color: #0075FF;
@@ -313,6 +392,7 @@
 	justify-content: center;
 	gap: 10%;
 }
+
 .links-list__link {
 	display: block;
 	height: 36px;
