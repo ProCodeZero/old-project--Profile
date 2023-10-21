@@ -18,24 +18,6 @@
 </head>
 
 <body>
-	<div id="popup" class="popup">
-		<div class="popup__body">
-			<div class="popup__content">
-				<div type="button" class="popup__btn"></div>
-				<ul class="popup__list">
-					<li class="popup__item">
-						<a href="#author" class="popup__link scrollto">Автор</a>
-					</li>
-					<li class="popup__item">
-						<a href="#portfolio" class="popup__link scrollto">Портфолио</a>
-					</li>
-					<li class="popup__item">
-						<a href="#contact" class="popup__link scrollto">Контакты</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
 	<div class="body-wrapper">
 		<section class="greeting">
 			<div id="greeting" class="greeting__container container">
@@ -47,6 +29,23 @@
 		</section>
 		<header id="header" class="header">
 			<div class="header__container container">
+				<div id="popup" class="popup">
+					<div class="popup__body">
+						<div class="popup__content">
+							<ul class="popup__list">
+								<li class="popup__item">
+									<a href="#author" class="popup__link scrollto">Автор</a>
+								</li>
+								<li class="popup__item">
+									<a href="#portfolio" class="popup__link scrollto">Портфолио</a>
+								</li>
+								<li class="popup__item">
+									<a href="#contact" class="popup__link scrollto">Контакты</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
 				<div class="header__logo logo">Hollow DS</div>
 				<nav class="header__navigation navigation">
 					<ul class="navigation__list">
@@ -60,9 +59,9 @@
 							<a href="#contact" class="navigation__link scrollto">Контакты</a>
 						</li>
 					</ul>
-					<a class="navigation__close-btn"></a>
 				</nav>
-				<a href="#popup" class="header__burger"><span></span></a>
+				<a href="#header" id="popup" class="header__burger popup-link "><span></span></a>
+				<a href="#header" id="popup" class="close-popup "></a>
 			</div>
 		</header>
 		<main class="main">
