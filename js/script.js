@@ -26,9 +26,6 @@ const popupCloseIcon = document.querySelector(".close-popup");
 const popupLink = document.querySelector(".popup-link");
 const popup = document.querySelector(".popup");
 const body = document.querySelector("body");
-console.log('popupCloseIcon :>> ', popupCloseIcon);
-console.log('popupLink :>> ', popupLink);
-console.log('body :>> ', body);
 
 // Popup code
 popupLink.addEventListener("click", function (e) {
