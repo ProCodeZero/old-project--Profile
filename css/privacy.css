@@ -1,0 +1,114 @@
+html,
+body {
+  color: #f8f8f8;
+  background-color: #2e2e2e;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+.politic-wrapper {
+  margin: 2.5rem;
+  min-height: 100vh;
+  display: flex;
+  max-width: 1220px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.politic__title {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  letter-spacing: 0.3em;
+  color: #0075ff;
+  @media (max-width: 701px) {
+    font-size: 1.4rem;
+  }
+}
+
+ol {
+  list-style: none;
+  counter-reset: li;
+}
+li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+.politic__list {
+  padding-left: 3rem;
+}
+.politic__list-element {
+  position: relative;
+  padding: 1.2rem;
+  font-weight: 600;
+}
+.politic__list-element::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  height: 1px;
+  width: 100%;
+  background-color: #0075ff;
+}
+.politic__sub-list {
+  font-weight: 300;
+}
+.politic__list-sub-element {
+  padding: 0.3rem;
+}
+
+@media (max-width: 500px) {
+  .politic__list {
+    padding-left: 0.8rem;
+  }
+  .politic__list-element {
+    position: relative;
+    padding: 0.6rem;
+    font-weight: 600;
+  }
+  .politic__sub-list {
+    padding-left: 0.8rem;
+  }
+}
+@media (max-width: 420px) {
+  .politic-wrapper {
+    margin: 5%;
+  }
+  .politic__title {
+    font-size: 1.2rem;
+  }
+  .politic__list {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 400px) {
+  .politic__list {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 370px) {
+	.politic__title{
+		font-size: 1rem;
+	}
+  .politic__list {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 290px) {
+  .politic__list {
+    width: 100%;
+    font-size: 0.6rem;
+  }
+}
